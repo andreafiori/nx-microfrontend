@@ -1,12 +1,26 @@
 
 
-# Acme
+# Nx monorepo with Microfrontend implementation and Module federation apps
 
 This project was generated using [Nx](https://nx.dev).
 
 <p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="450"></p>
 
 🔎 **Smart, Fast and Extensible Build System**
+
+## Run main application
+
+Run main application. The other apps will be static:
+
+```bash
+nx serve host
+```
+
+Running application with all dynamic apps:
+
+```bash
+nx serve host --devRemotes=about,cart,shop
+```
 
 ## Adding capabilities to your workspace
 

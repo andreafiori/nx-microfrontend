@@ -2,6 +2,7 @@
   "projectType": "application",
   "sourceRoot": "apps/host/src",
   "prefix": "acme",
+  "implicitDependencies": ["about", "shop", "cart"],
   "targets": {
     "build": {
       "executor": "@nrwl/angular:webpack-browser",

@@ -2,6 +2,11 @@ const { withModuleFederation } = require('@nrwl/angular/module-federation');
 const config = require('./module-federation.config');
 module.exports = withModuleFederation({
   ...config,
+  remotes: [
+    ['shop', 'http://localhost/nxmicro/shop'],
+    ['cart', 'http://localhost/nxmicro/cart'],
+    ['about', 'http://localhost/nxmicro/about'],
+  ],
   /*
    * Remote overrides for production.
    * Each entry is a pair of an unique name and the URL where it is deployed.

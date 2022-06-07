@@ -1,5 +1,3 @@
-
-
 # Nx monorepo with Microfrontend implementation and Module federation apps
 
 This project was generated using [Nx](https://nx.dev).
@@ -20,6 +18,40 @@ Running application with all dynamic apps:
 
 ```bash
 nx serve host --devRemotes=about,cart,shop
+```
+
+## Steps to create this workspace
+
+```bash
+npx create-nx-workspace@latest
+```
+
+select empty (first option)
+
+cd <workspace_directory>
+
+Add angular
+npm install --save-dev @nrwl/angular
+
+create host and some apps:
+
+```bash
+nx g @nrwl/angular:host shell --remotes=shop,cart
+```
+
+Add remote application:
+```bash
+nx g @nrwl/angular:remote about --host=shell
+```
+
+Create dist and launch the application:
+
+```bash
+nx serve host --open
+```
+
+```bash
+nx serve host --open --devRemotes=shop,cart
 ```
 
 ## Adding capabilities to your workspace

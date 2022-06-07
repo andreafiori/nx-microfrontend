@@ -22,13 +22,13 @@ import { RouterModule } from '@angular/router';
             import('cart/Module').then((m) => m.RemoteEntryModule),
         },
         {
+          path: '',
+          component: NxWelcomeComponent,
+        },
+        {
           path: 'about',
           loadChildren: () =>
             import('about/Module').then((m) => m.RemoteEntryModule),
-        },
-        {
-          path: '',
-          component: NxWelcomeComponent,
         },
       ],
       { initialNavigation: 'enabledBlocking' }
